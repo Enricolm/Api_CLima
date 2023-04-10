@@ -11,7 +11,7 @@ from datetime import date,datetime
 #Link Request
 
 # %%
-APi_Key = '13b5ba9e5e9e393dc81e5f3b5b9459a9'    
+APi_Key = '###############'    
 cidade = 'sao paulo'
 cod_cid = 'br'
 #request = re.get('https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'.format(cidade,APi_Key))
@@ -40,8 +40,8 @@ list
 dt_clima = pd.DataFrame(data= list, index=[0])
 print(dt_clima)
 # # %%
-# df_antiga = pd.read_csv('Clima.csv', sep=';')
-# df_antiga = pd.concat([df_antiga,dt_clima])
+df_antiga = pd.read_csv('Clima.csv', sep=';')
+df_antiga = pd.concat([df_antiga,dt_clima])
 
 # # %%
 dt_clima.to_csv('Clima.csv',index=False,  sep=';')
